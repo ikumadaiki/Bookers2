@@ -20,11 +20,11 @@
                 <tr>
                   <td>
                     <%=link_to user_path(@user) do %>
-                      <%= attachment_image_tag @user, :profile_image,width: '20%', height: '20%', format: 'jpeg', fallback: "no_image.jpeg", class: "attachment user profile_image fallback" %>
+                      <%= attachment_image_tag user, :profile_image,width: '20%', height: '20%', format: 'jpeg', fallback: "no_image.jpeg", class: "attachment user profile_image fallback" %>
                     <% end %>
                   </td>
-                  <td><%= @user.name %></td>
-                  <td><%=link_to "Show" , user_path(user.id) %></td>
+                  <td><%= user.name %></td>
+                  <td><%=link_to "Show" , user_path(user) %></td>
                 </tr>
 
               <% end %>
