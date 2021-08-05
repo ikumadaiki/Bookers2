@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @users=User.all
     @books=@user.books
+    
   end
   
 

@@ -23,6 +23,7 @@
                 </td>
                 <td><%=link_to @book.title , book_path(@book) %></td>
                 <td><%=@book.body %></td>
+                <%= render 'books/favorite' , book:@book %>
                 <td>コメント数：<%=@book.book_comments.count %></td>
 
                 <% if @user.id == current_user.id %>
@@ -46,6 +47,8 @@
                           <%= book_comment.user.name %>
                         <% end %>
                       </td>
+                      
+                      
                       <td>
                         <%= book_comment.comment %>
                       </td>
